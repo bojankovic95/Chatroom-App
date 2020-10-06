@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="icon" href="head.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body onload="onload">
+
+<div class="container">
+
+    <header>
+        <h1 class="head">IT Bootcamp chatroom</h1>
+        <h3 class="head">Choose a chatroom</h3>
+    </header>
+        <div class="content">
+            <nav id="navButtons">
+        
+                <button id="general" class="btn">#general</button>
+                <button id="js" class="btn">#js</button>
+                <button id="homeworks" class="btn">#homeworks</button>
+                <button id="tests" class="btn">#tests</button>
+        
+            </nav>
+
+            <div class="messages">
+                <ul class="messages">
+                        
+                </ul>
+            </div>
+
+        <form id = "messageForm">
+            <!-- <textarea name="" id="messageInput" cols="50" rows="3" placeholder="Your message..."></textarea> -->
+            <input type="text" placeholder="Your message..." id="messageInput" class="input"> 
+            <input type="submit" value="Send" id="sendBtn" class="btn1">
+        </form>
+
+            <button id="optionsBtn" class="btn1">Options</button>
+
+    </div>
+    </div>
+    <div id="optionsDiv">
+    
+        <form id="usernameForm">
+            <input type="text" placeholder="Update username" id="usernameInput" class="input marg">
+            <input type="submit" value="Update" id="updateBtn" class="btn1 marg">
+        </form>
+        <form id="date">
+            <input type="datetime-local" name="startDate" id="startDate" class="dateForm marg">
+            <input type="datetime-local" name="endDate" id="endDate" class="dateForm marg">
+            <input type="submit" value="Filter Messages" id="dateBtn" class="btn1 marg">
+        </form>
+        <form id="colorPickerForm">
+            <input type="color" id="colorPicker" value="#FFFFFF" class="marg">
+            <input type="submit" value="Update color" id="colorButton" class="btn1 marg">
+        </form>
+    </div>
+</div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAlDlM7X_Ecy5IDxSFLEwN8MLHNayTsgT4",
+            authDomain: "chatroom-bo.firebaseapp.com",
+            databaseURL: "https://chatroom-bo.firebaseio.com",
+            projectId: "chatroom-bo",
+            storageBucket: "chatroom-bo.appspot.com",
+            messagingSenderId: "494059392886",
+            appId: "1:494059392886:web:0b773fc488c05d9376f457",
+            measurementId: "G-5LSNYFE684"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+
+        let db = firebase.firestore();
+    </script>
+
+
+
+
+
+    <script type="module" src="JS/app.js"></script>
+</body>
+</html>

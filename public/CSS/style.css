@@ -1,0 +1,397 @@
+/*LAP TOP VERZIJA*/
+
+@media only screen and (min-width: 600px) {
+  * {
+    text-align: center;
+  }
+
+  body {
+    height: 100%;
+    background-image: url("slika.jpg");
+  }
+
+  #optionsDiv {
+    display: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.438);
+    width: 20%;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    z-index: 3;
+  }
+
+  .head {
+    color: rgb(36, 146, 135);
+    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.88);
+  }
+
+  .btn {
+    width: 24%;
+    height: 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 0;
+    box-shadow: 0px 1px 0px 0px #e1c247;
+    background: linear-gradient(to bottom, #ffec64 5%, #f9a724 100%);
+
+    border-radius: 6px;
+    border: 1px solid #f6f8c6;
+    cursor: pointer;
+    color: #333333;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #dcf8c6;
+  }
+
+  .btnclicked {
+    background: linear-gradient(to bottom, #f7f145 5%, #fced7d 100%);
+  }
+
+  .btn1 {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 0;
+    box-shadow: 0px 1px 0px 0px #114d0b;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+
+    border-radius: 6px;
+    border: 1px solid #61fb53;
+    cursor: pointer;
+    color: #333333;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #71e320;
+  }
+
+  #optionsBtn {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .btn1:hover {
+    background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  }
+  .btn:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  }
+  .btnclicked:hover {
+    background: linear-gradient(to bottom, #f7f145 5%, #fced7d 100%);
+  }
+
+  .deleteButton {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #b9e650;
+    background-color: #e4f0c7;
+    color: #87a939;
+  }
+
+  #colorPicker {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    /* background-color: rgba(255, 255, 255, 0.246); */
+    background-image: url("slika.jpg");
+  }
+
+  form {
+    margin: 15px;
+  }
+
+  input {
+    width: 400px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  #usernameInput {
+    width: 100%;
+  }
+
+  #messageInput {
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .dateForm {
+    width: 47%;
+  }
+  .marg {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  input:focus,
+  .btn:focus {
+    outline-width: 0;
+  }
+
+  .messages {
+    border: 1px rgb(121, 121, 121) solid;
+    margin: 10px auto auto auto;
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    background-image: url("back.jpeg");
+  }
+
+  .content {
+    /* position: fixed; */
+    right: 20%;
+    left: 20%;
+    margin: auto;
+    border: 1px rgb(121, 121, 121) solid;
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.246);
+    -webkit-box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+    box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+    position: absolute;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .messageui {
+    float: left;
+    text-align: left;
+    padding: 7px;
+    width: 60%;
+    box-shadow: 1px 1px 1px 1px rgb(159, 179, 60);
+    border-top-left-radius: none;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 5px;
+    background-color: #f1ffc8;
+    color: black;
+    position: relative;
+  }
+
+  .messageuiright {
+    text-align: left;
+    float: right;
+    padding: 7px;
+    width: 60%;
+    box-shadow: 2px 2px rgb(146, 169, 34);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: none;
+    margin: 5px;
+    background-color: #ffffff;
+    color: black;
+    position: relative;
+  }
+
+  .username {
+    color: #fb6453;
+    background-color: transparent;
+  }
+
+  .message {
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  .date {
+    color: #faa096d7;
+    font-size: 15px;
+    text-align: left;
+    background-color: transparent;
+  }
+  .input {
+    height: 40px;
+  }
+}
+
+/*MOBILNA VERZIJA*/
+@media only screen and (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+
+  body {
+    height: 1000px;
+    background-image: url("slika.jpg");
+  }
+
+  .head {
+    color: rgb(36, 146, 135);
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    height: 30px;
+    margin: 3px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 0;
+    box-shadow: 0px 1px 0px 0px #e1c247;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+
+    border-radius: 6px;
+    border: 1px solid #f6f8c6;
+    cursor: pointer;
+    color: #333333;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #dcf8c6;
+  }
+
+  .btnclicked {
+    background: linear-gradient(to bottom, #f7f145 5%, #fced7d 100%);
+  }
+
+  .btn1 {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    border: 0;
+    box-shadow: 0px 1px 0px 0px #114d0b;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+
+    border-radius: 6px;
+    border: 1px solid #61fb53;
+    cursor: pointer;
+    color: #333333;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #71e320;
+  }
+
+  .btn1:hover {
+    background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+  }
+  .btn:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  }
+
+  .deleteButton {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+  }
+
+  form {
+    margin: auto;
+  }
+
+  input {
+    width: 98%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  input:focus,
+  .btn:focus {
+    outline-width: 0;
+  }
+
+  .messages {
+    width: 100%;
+    border: 1px rgb(121, 121, 121) solid;
+    margin: 10px auto auto auto;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    background-image: url("back.jpeg");
+  }
+
+  .content {
+    width: 100%;
+    margin: auto;
+    border: 1px rgb(121, 121, 121) solid;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.246);
+    -webkit-box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+    box-shadow: 10px 10px 31px 8px rgba(0, 0, 0, 0.69);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .messageui {
+    float: left;
+    text-align: left;
+    padding: 5px;
+    width: 60%;
+    box-shadow: 2px 2px rgb(146, 169, 34);
+    border-top-left-radius: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 5px;
+    background-color: #f1ffc8;
+    color: black;
+    position: relative;
+  }
+
+  .messageuiright {
+    text-align: left;
+    float: right;
+    padding: 5px;
+    width: 60%;
+    box-shadow: 2px 2px rgb(146, 169, 34);
+    border-top-left-radius: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 5px;
+    background-color: #ffffff;
+    color: black;
+    position: relative;
+  }
+
+  .username {
+    color: #ff7d6fc6;
+    background-color: transparent;
+  }
+
+  .message {
+    font-size: 20px;
+    background-color: transparent;
+  }
+
+  .date {
+    color: #faa096d7;
+    font-size: 15px;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  #optionsBtn {
+    margin-top: 5px;
+  }
+
+  .marg {
+    margin-top: 0.2em;
+  }
+}
